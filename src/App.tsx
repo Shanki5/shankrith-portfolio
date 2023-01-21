@@ -4,6 +4,7 @@ import { AboutSection } from './Containers/About/Index';
 import { WorkSection } from './Containers/Work/Index';
 import { Navbar } from './Containers/Navbar/Index';
 import { ProjectsSection } from './Containers/Projects/Index';
+import { ContactLinks } from './Components/SideContainers';
 
 const AppContainer = styled.div`
   width: 100%;
@@ -22,6 +23,7 @@ function App() {
       <AboutSection />
       <WorkSection />
       <ProjectsSection />
+      <ContactLinks />
     </AppContainer>
   );
 }

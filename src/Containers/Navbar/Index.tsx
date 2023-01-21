@@ -1,5 +1,4 @@
 import React from "react";
-import { SectionComponent } from "../../Components/Sections";
 import styled from "styled-components";
 import { StyledLink } from "../../Components/Common";
 
