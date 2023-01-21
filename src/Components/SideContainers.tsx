@@ -28,15 +28,32 @@ const ContactLinksContainer = styled.ul`
     }
 `;
 
+const StyledLink = styled.a`
+    display:inline-block;
+    position:relative;
+    text-decoration: none;
+    color:#fff;
+    transition: var(--transition);
+    &:hover {
+        color: #64ffda;
+        transform: translateY(-3px);
+        
+    }
+    &:focus{
+        transform: translateY(-3px);
+    }
+    
+`;
+
 export function ContactLinks() {
     return (
         <SideContainer>
             <ContactLinksContainer>
                 <li>
-                    <a href="https://github.com/Shanki5" target="_blank"><BsGithub size="30" color="white" /></a>
+                    <StyledLink href="https://github.com/Shanki5" target="_blank"><BsGithub size="30" /></StyledLink>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/in/shankrith-s/" target="_blank"><GrLinkedin size="30" color="white" /></a>
+                    <StyledLink href="https://www.linkedin.com/in/shankrith-s/" target="_blank"><GrLinkedin size="30" /></StyledLink>
                 </li>
             </ContactLinksContainer>
         </SideContainer>
