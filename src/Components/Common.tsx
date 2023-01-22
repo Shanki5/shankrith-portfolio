@@ -26,7 +26,7 @@ export const PrimaryButtonLookingLink = styled.a`
     color: #64ffda;
     background-color:transparent;
     border: 1px solid #64ffda;
-    border-radius: 15px;
+    border-radius: 10px;
     text-decoration: none;
     padding: 1rem 1.5rem;
 

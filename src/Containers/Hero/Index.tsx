@@ -6,7 +6,7 @@ const HeroSectionContainer = styled.section`
     /* padding-top:5rem; */
     margin: 0px auto;
     max-width: 1000px;
-    min-height: 90vh;
+    min-height: 70vh;
 `
 const Heading1 = styled.h1`
     font-size: 16px;
@@ -47,6 +47,6 @@ export function HeroView() {
                 <p>"What we do now, echoes in eternity" - Marcus Aurelius </p>
                 <p> I am an experienced C++ developer with a passion for Systems Development ,Game Development and Backend Development. With a strong background in software engineering and a keen interest in technology, I am dedicated to creating innovative and efficient solutions. My experience in developing and implementing complex systems allows me to turn ideas into reality. I am always seeking new challenges and opportunities to learn and grow as a developer. Let's connect and explore how we can work together to create something amazing!</p>
             </HeroContentContainer>
-            <PrimaryButtonLookingLink>Reach out!</PrimaryButtonLookingLink>
+            <PrimaryButtonLookingLink href="mailto:shankrith1618@gmail.com">Reach out!</PrimaryButtonLookingLink>
         </HeroSectionContainer >)
 }

@@ -15,7 +15,6 @@ const AppContainer = styled.div`
   flex-direction: column;
   gap: 5rem;
   align-items: center;
-  background: #0a192f;
 
 `;
 
