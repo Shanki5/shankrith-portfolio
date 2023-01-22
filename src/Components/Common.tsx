@@ -31,4 +31,10 @@ export const PrimaryButtonLookingLink = styled.a`
     text-decoration: none;
     padding: 1rem 1.5rem;
 
+    &:hover{
+        background-color:rgba(100, 255, 218,0.3);
+        color: rgb(100, 255, 218);
+    }
+
+
 `;
