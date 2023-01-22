@@ -94,7 +94,7 @@ export function Project(props: IProjectProps) {
                 </div>
             </ContentContainer>
             <ImageContainer {...props}>
-                <a href=""><img src={props.imageUrl.toString()} width="500" alt="" /></a>
+                <a href={props.githubUrl.toString()}><img src={props.imageUrl.toString()} width="500" alt="" /></a>
 
             </ImageContainer>
         </ParentContainer >
