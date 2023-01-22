@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { StyledLink } from "../../Components/Common";
 
 const Container = styled.div`
     display: grid;

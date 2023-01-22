@@ -1,4 +1,3 @@
-import { SectionComponent } from "../../Components/Sections";
 import { Work } from "./work";
 import { workExperienceData } from "./Data";
 import styled from "styled-components";
