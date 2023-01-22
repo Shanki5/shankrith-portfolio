@@ -29,6 +29,12 @@ export function Navbar() {
             <li>
                 <StyledLink href="#work">Work</StyledLink>
             </li>
+            <li>
+                <StyledLink href="#project">Projects</StyledLink>
+            </li>
+            <li>
+                <StyledLink href="#contact">Contact</StyledLink>
+            </li>
         </Container>
     </Navigation >)
 }
