@@ -22,6 +22,8 @@ const Container = styled.div`
 
 const Heading = styled.h3`
     margin: 0;
+    font-size: 22px;
+    font-weight: 500;
 `
 const DateRange = styled.p`
     margin: 0;
@@ -32,6 +34,24 @@ const dateOptions: Intl.DateTimeFormatOptions = {
     year: 'numeric',
     month: 'short',
 }
+
+const StyledListElement = styled.li`
+    &::before{
+        content: "» ";
+        color: #64ffda;
+        position: relative;
+    }
+`
+const GridList = styled.ul`
+    list-style-type:none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 18px;
+    font-weight: 300;
+    color: rgb(136, 146, 176);
+
+`
 
 export function Work(props: IWorkProps) {
     return (<Container>
@@ -44,9 +64,9 @@ export function Work(props: IWorkProps) {
         </Heading>
         <DateRange>{props.startDate.toLocaleString("en-IN", dateOptions)}&nbsp;-&nbsp;
             {(props.endDate != null) ? props.endDate.toLocaleString("en-IN", dateOptions) : "Present"}</DateRange>
-        <ul>{props.description.map((point, index) => {
-            return (<li>{point}</li>)
-        })}</ul>
+        <GridList>{props.description.map((point, index) => {
+            return (<StyledListElement>{point}</StyledListElement>)
+        })}</GridList>
     </Container>)
 }
 
