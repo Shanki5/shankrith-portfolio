@@ -1,7 +1,8 @@
 import styled from "styled-components"
 export const StyledLink = styled.a`
     text-decoration: none;
-    color:#fff;
+    color: #64ffda;
+
     display: inline-block;
     position: relative;
 

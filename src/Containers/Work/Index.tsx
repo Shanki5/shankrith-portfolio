@@ -30,7 +30,7 @@ const Heading2 = styled.h2`
 export function WorkSection() {
     return (
         <SectionContainer id="work" >
-            <Heading2>Where I've worked</Heading2>
+            <Heading2>Where I've Worked</Heading2>
             <div>
                 {workExperienceData.map((workExperience, index) => {
                     return (<Work {...workExperience} />)
