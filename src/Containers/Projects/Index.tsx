@@ -40,8 +40,8 @@ export function ProjectsSection() {
     return (<SectionContainer id="projects" >
         <Heading2>Some Things I've Built</Heading2>
         <Container>
-            {projectsData.map((projectObject) => {
-                return (<Project {...projectObject}></Project>)
+            {projectsData.map((projectObject, index) => {
+                return (<Project {...projectObject} ></Project>)
             })}
         </Container>
     </SectionContainer>)

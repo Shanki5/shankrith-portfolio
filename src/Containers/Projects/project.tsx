@@ -6,6 +6,7 @@ export interface IProjectProps {
     techStack: string[],
     imageUrl: URL,
     githubUrl: URL,
+    orientation: boolean;
 }
 const ParentContainer = styled.li`
   position: relative;
@@ -15,22 +16,44 @@ const ParentContainer = styled.li`
   align-items: center;
 
 `;
-const ImageContainer = styled.div`
-    grid-area: 1 / 6 / -1 / -1;  
+const ImageContainer = styled.div<IStyleProps>`
+
+
     max-width: 500px;          
     overflow: hidden;
     border-radius: 5px;
+    ${props => props.orientation === true ?
+        `grid-area: 1 / 6 / -1 / -1;` : `grid-area: 1 / 1 / -1 / 7;
+`}
 
 `;
 
-const ContentContainer = styled.div`
-    grid-area: 1 / 1 / -1 / 7;
-    text-align: left; 
+interface IStyleProps {
+    orientation: boolean
+}
+
+const ContentContainer = styled.div<IStyleProps>`
+    /* grid-area: 1 / 1 / -1 / 7; */
+    grid-area: 1 / 6 / -1 / -1;  
+
+    /* text-align: left;  */
+    text-align: right;
     z-index: 10;
     display:flex;
     flex-direction: column;
     gap: 1rem;
-    align-items: start;
+    align-items: end;
+    /* align-items: start; */
+    ${props => props.orientation === true ?
+        `align-items:start;
+        text-align: left;
+        grid-area: 1 / 1 / -1 / 7;
+    ` :
+        `align-items:end;
+        grid-area: 1 / 6 / -1 / -1;
+        text-align: right;
+        `
+    }
 `;
 const TechStackContainer = styled.ul`
     list-style-type:none;
@@ -50,11 +73,16 @@ const FrostedGlassBlock = styled.div`
     position:relative;
 `;
 
+const ProjectHeading = styled.h3`
+  font-size: 28px;  
+  font-weight: 600;
+`;
+
 export function Project(props: IProjectProps) {
     return (
         <ParentContainer>
-            <ContentContainer>
-                <h3>{props.name}</h3>
+            <ContentContainer {...props}>
+                <ProjectHeading>{props.name}</ProjectHeading>
                 <FrostedGlassBlock><p>{props.description}</p></FrostedGlassBlock>
                 <TechStackContainer>
                     {props.techStack.map((tech, index) => {
@@ -65,10 +93,10 @@ export function Project(props: IProjectProps) {
                     <a href={props.githubUrl.toString()}><BsGithub size="24" color="white" /></a>
                 </div>
             </ContentContainer>
-            <ImageContainer>
+            <ImageContainer {...props}>
                 <a href=""><img src={props.imageUrl.toString()} width="500" alt="" /></a>
 
             </ImageContainer>
-        </ParentContainer>
+        </ParentContainer >
     )
 }
