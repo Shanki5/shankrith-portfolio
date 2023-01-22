@@ -7,6 +7,7 @@ import { ProjectsSection } from './Containers/Projects/Index';
 import { ContactLinks } from './Components/SideContainers';
 import { ContactSection } from './Containers/Contact/Index';
 import { Footer } from './Components/Footer';
+import { HeroView } from './Containers/Hero/Index';
 
 const AppContainer = styled.div`
   width: 100%;
@@ -18,13 +19,25 @@ const AppContainer = styled.div`
 
 `;
 
+const BodyContainer = styled.main`
+  padding: 0px 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  align-items: center;
+  max-width: 1600px;
+`
+
 function App() {
   return (
     <AppContainer>
       <Navbar />
-      <AboutSection />
-      <WorkSection />
-      <ProjectsSection />
+      <BodyContainer >
+        <HeroView />
+        <AboutSection />
+        <WorkSection />
+        <ProjectsSection />
+      </BodyContainer>
       <ContactLinks />
       <ContactSection />
 

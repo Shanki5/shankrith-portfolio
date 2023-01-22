@@ -21,3 +21,13 @@ export const StyledLink = styled.a`
     }
     
 `
+
+export const PrimaryButtonLookingLink = styled.a`
+    color: #64ffda;
+    background-color:transparent;
+    border: 1px solid #64ffda;
+    border-radius: 15px;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+
+`;

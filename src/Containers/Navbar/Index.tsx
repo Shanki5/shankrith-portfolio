@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { StyledLink } from "../../Components/Common";
-
+import { PrimaryButtonLookingLink } from "../../Components/Common";
 const Container = styled.ul`
     display: flex;
     gap: 2rem;
@@ -30,10 +30,16 @@ export function Navbar() {
                 <StyledLink href="#work">Work</StyledLink>
             </li>
             <li>
-                <StyledLink href="#project">Projects</StyledLink>
+                <StyledLink href="#projects">Projects</StyledLink>
             </li>
             <li>
                 <StyledLink href="#contact">Contact</StyledLink>
+            </li>
+            <li>
+                <PrimaryButtonLookingLink
+                    href="https://www.icloud.com/iclouddrive/0f3_G_MH9V2zy_C1kSTADtadQ#shankrith%5Fresume">
+                    Resume
+                </PrimaryButtonLookingLink>
             </li>
         </Container>
     </Navigation >)

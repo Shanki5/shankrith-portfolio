@@ -8,7 +8,7 @@ const SideContainer = styled.div`
     width: 40px;
     position: fixed;
     bottom: 0px;
-    left: 40px;
+    left: 20px;
     right: auto;
     z-index: 10;
 `;
@@ -22,7 +22,7 @@ const ContactLinksContainer = styled.ul`
     &::after{
     content: "";
     width: 1px;
-    height: 90px;
+    height: 180px;
     margin: 0px auto;
     background-color: white;
     }
@@ -50,10 +50,10 @@ export function ContactLinks() {
         <SideContainer>
             <ContactLinksContainer>
                 <li>
-                    <StyledLink href="https://github.com/Shanki5" target="_blank"><BsGithub size="30" /></StyledLink>
+                    <StyledLink href="https://github.com/Shanki5" target="_blank"><BsGithub size="24" /></StyledLink>
                 </li>
                 <li>
-                    <StyledLink href="https://www.linkedin.com/in/shankrith-s/" target="_blank"><GrLinkedin size="30" /></StyledLink>
+                    <StyledLink href="https://www.linkedin.com/in/shankrith-s/" target="_blank"><GrLinkedin size="24" /></StyledLink>
                 </li>
             </ContactLinksContainer>
         </SideContainer>
