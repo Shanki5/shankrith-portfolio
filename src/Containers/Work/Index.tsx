@@ -26,14 +26,20 @@ const Heading2 = styled.h2`
     
 `;
 
+const ContentContainer = styled.div`
+    display:flex;
+    flex-direction:column;
+    gap:2rem;
+`;
+
 export function WorkSection() {
     return (
         <SectionContainer id="work" >
             <Heading2>Where I've Worked</Heading2>
-            <div>
+            <ContentContainer>
                 {workExperienceData.map((workExperience, index) => {
                     return (<Work {...workExperience} />)
                 })}
-            </div>
+            </ContentContainer>
         </SectionContainer>)
 }

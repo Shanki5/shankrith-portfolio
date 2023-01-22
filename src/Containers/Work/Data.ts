@@ -23,10 +23,12 @@ export const workExperienceData: IWorkProps[] = [{
     role: "Systems Software Engineer Intern",
     startDate: new Date("2021-05-01"),
     endDate: new Date("2021-08-31"),
-    description: [],
+    description: ["Developed a high performant autonomous navigation stack in {\bf C++} for warehouse robots.",
+        "Designed an algorithm to detect changes in the environment in order to indicate to the user, that the environment needs to be remapped",
+        "Implemented a novel teleoperation feature that incorporated autonomous obstacle avoidance, resulting in a 70\% increase in efficiency and safety during teleoperation."],
     company: {
-        name: "Mowito Private",
-        location: "Singapore",
+        name: "Mowito Robotic Systems PVT. Ltd.",
+        location: "Bangalore",
     },
     techStack: []
 }]
