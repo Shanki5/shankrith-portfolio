@@ -27,8 +27,9 @@ export const workExperienceData: IWorkProps[] = [{
         "Designed an algorithm to detect changes in the environment in order to indicate to the user, that the environment needs to be remapped",
         "Implemented a novel teleoperation feature that incorporated autonomous obstacle avoidance, resulting in a 70% increase in efficiency and safety during teleoperation."],
     company: {
-        name: "Mowito Robotic Systems PVT. Ltd.",
+        name: "Mowito Robotic Systems",
         location: "Bangalore",
+        url: "https://www.mowito.in"
     },
     techStack: []
 }]

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import headshot from '../../images/headshot.jpg'
 
 const Container = styled.div`
     display: grid;
@@ -80,9 +81,9 @@ export function AboutSection() {
         <FrostedGlassBlock>
             <Container>
                 <div>
-                    <p> Hello! My name is Shankrith and I enjoy coding. My interest in coding started back in 2012 when I decided to try editing custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML & CSS!</p>
-                    <p>Fast-forward to today, and I’ve had the privilege of working at an advertising agency, a start-up, a huge corporation, and a student-led design studio. My main focus these days is building accessible, inclusive products and digital experiences at Upstatement for a variety of clients.</p>
-                    <p>I also recently launched a course that covers everything you need to build a web app with the Spotify API using Node & React.</p>
+                    <p> Hello! My name is Shankrith and I enjoy coding. My interest in coding started back in 2012 when I built a game with my friends.</p>
+                    <p>Fast-forward to today, and I’ve had the privilege of working at 2 fast paced start-ups. My main focus these days is backend engineering.</p>
+                    <p></p>
                     <p>Here are a few technologies I’ve been working with recently:</p>
                     <GridList>
                         {TechStackList.map((tech) => {
@@ -93,7 +94,7 @@ export function AboutSection() {
                 </div>
                 <Image>
                     <picture>
-                        <img src="https://i0.wp.com/digital-photography-school.com/wp-content/uploads/2016/02/What-to-wear-2.jpeg?ssl=1" alt="" width="300" height="300" />
+                        <img src={headshot} alt="" width="300" height="300" />
                     </picture>
                 </Image>
             </Container>

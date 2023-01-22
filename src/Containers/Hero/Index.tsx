@@ -45,7 +45,7 @@ export function HeroView() {
             </div >
             <HeroContentContainer>
                 <p>"What we do now, echoes in eternity" - Marcus Aurelius </p>
-                <p> I am an experienced C++ developer with a passion for Systems Development ,Game Development and Backend Development. With a strong background in software engineering and a keen interest in technology, I am dedicated to creating innovative and efficient solutions. My experience in developing and implementing complex systems allows me to turn ideas into reality. I am always seeking new challenges and opportunities to learn and grow as a developer. Let's connect and explore how we can work together to create something amazing!</p>
+                <p> I am an experienced software developer with a passion for Backend Development, Systems Development, and Game Development. With a strong background in software engineering and a keen interest in technology, I am dedicated to creating innovative and efficient solutions. My experience in developing and implementing complex systems allows me to turn ideas into reality. I am always seeking new challenges and opportunities to learn and grow as a developer. Let's connect and explore how we can work together to create something amazing!</p>
             </HeroContentContainer>
             <PrimaryButtonLookingLink href="mailto:shankrith1618@gmail.com">Reach out!</PrimaryButtonLookingLink>
         </HeroSectionContainer >)
