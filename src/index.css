@@ -4,7 +4,7 @@ body,
     height: 100%;
     width: 100%;
     margin: 0;
-    background-image: url('../public/758860828418.jpg');
+    background-image: url('../public/bg_image.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -17,6 +17,10 @@ body {
         'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 code {
