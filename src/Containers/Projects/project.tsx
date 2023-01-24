@@ -5,7 +5,7 @@ export interface IProjectProps {
     description: string,
     techStack: string[],
     imageUrl: URL,
-    githubUrl: URL,
+    githubUrl?: URL,
     orientation: boolean;
 }
 const ParentContainer = styled.li`
@@ -115,11 +115,15 @@ export function Project(props: IProjectProps) {
                     })}
                 </TechStackContainer>
                 <div>
-                    <a href={props.githubUrl.toString()}><BsGithub size="24" color="white" /></a>
+                    {props.githubUrl ?
+                        <a href={props.githubUrl.toString()}><BsGithub size="24" color="white" /></a>
+                        : (<text></text>)
+                    }
+
                 </div>
             </ContentContainer>
             <ImageContainer {...props}>
-                <a href={props.githubUrl.toString()}><img src={props.imageUrl.toString()} width="500" alt="" /></a>
+                <a href={props.githubUrl ? props.githubUrl.toString() : ""}><img src={props.imageUrl.toString()} width="500" alt="" /></a>
 
             </ImageContainer>
         </ParentContainer >
