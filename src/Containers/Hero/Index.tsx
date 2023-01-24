@@ -2,8 +2,6 @@ import styled from "styled-components"
 import { PrimaryButtonLookingLink } from "../../Components/Common";
 
 const HeroSectionContainer = styled.section`
-    color:white;
-    /* padding-top:5rem; */
     margin: 0px auto;
     max-width: 1000px;
     min-height: 70vh;
@@ -17,11 +15,21 @@ const Heading1 = styled.h1`
     font-size: 1rem;  
 `;
 const Heading2 = styled.h2`
+    ${props => {
+        return (`
+        color: ${props.theme.palette.common.light};
+        `)
+    }}
     font-size: 80px;
     margin: 0;
 `;
 
 const Heading3 = styled.h3`
+    ${props => {
+        return (`
+        color: ${props.theme.palette.common.dark};
+        `)
+    }}
     font-size: 40px;
     margin: 0 0 2rem;  
     font-weight: 600;

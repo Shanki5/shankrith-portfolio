@@ -3,9 +3,9 @@ export const defaultTheme: DefaultTheme = {
     borderRadius: '4px',
     palette: {
         common: {
-            main: '#b9b9b9;',
-            light: '#9fb6ce',
-            dark: '#000000'
+            main: '#d4d9d9',
+            light: '#cce8f0',
+            dark: '#89a3aa'
         },
         primary: {
             main: '#64ffda',
