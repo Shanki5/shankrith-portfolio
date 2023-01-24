@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { BsGithub } from "react-icons/bs";
+import { SubHeading } from "../../Components/Common";
+
 export interface IProjectProps {
     name: string,
     description: string,
@@ -57,8 +59,6 @@ const FrostedGlassBlock = styled.div`
     padding:1rem;
     margin: 0rem 0rem 0rem;
     background-color: #455d623b;
-    /* background:inherit; */
-    /* background-color: transparent; */
     border-radius: 5px;
     overflow: hidden;
     position:relative;
@@ -76,38 +76,13 @@ const FrostedGlassBlock = styled.div`
 
 
     }
-
-
-    /* padding:2rem;
-    background: inherit;
-    border-radius: 15px;
-    border: 1px solid rgba(5, 39, 56, 0.568);
-    overflow: hidden;
-    position:relative;
-    &:before {
-        position:absolute;
-        content: '';
-        background: inherit;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        box-shadow: inset 0 0 0 3000px rgba(211, 211, 211, 0.192);
-        filter: blur(50px);
-        border-radius: 15px;
-        } */
-`;
-
-const ProjectHeading = styled.h3`
-  font-size: 1.75rem;  
-  font-weight: 600;
 `;
 
 export function Project(props: IProjectProps) {
     return (
         <ParentContainer>
             <ContentContainer {...props}>
-                <ProjectHeading>{props.name}</ProjectHeading>
+                <SubHeading>{props.name}</SubHeading>
                 <FrostedGlassBlock><p>{props.description}</p></FrostedGlassBlock>
                 <TechStackContainer>
                     {props.techStack.map((tech, index) => {
