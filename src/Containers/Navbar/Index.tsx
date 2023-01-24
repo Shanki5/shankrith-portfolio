@@ -2,44 +2,60 @@ import React from "react";
 import styled from "styled-components";
 import { StyledLink } from "../../Components/Common";
 import { PrimaryButtonLookingLink } from "../../Components/Common";
+
+
 const Container = styled.ul`
     display: flex;
     gap: 2rem;
     align-items:center;
     list-style-type:none;
-    width:100%;
-    justify-content:flex-end;
-    padding-right:1rem;
-
+    justify-content: flex-end;
+    
 `
 
 const Navigation = styled.nav`
     display: flex;
     align-items:center;
-    width:100%;
-    padding-top:1rem;
+    width: 100%;
+    position: relative;
+    justify-content:flex-end;
+`
+const ResumeButton = styled(PrimaryButtonLookingLink)`
+    padding: 0.4rem 0.5rem;
+`;
+
+const SectionLinks = styled.a`
+    ${props => {
+        return (`
+            color: ${props.theme.palette.common.main};
+            &:hover{
+                color: ${props.theme.palette.primary.main};
+            }
+        `)
+    }}
+    text-decoration: none;
 `
 
 export function Navbar() {
     return (<Navigation>
         <Container>
             <li>
-                <StyledLink href="#about">About</StyledLink>
+                <SectionLinks href="#about">About</SectionLinks>
             </li>
             <li>
-                <StyledLink href="#work">Work</StyledLink>
+                <SectionLinks href="#work">Work</SectionLinks>
             </li>
             <li>
-                <StyledLink href="#projects">Projects</StyledLink>
+                <SectionLinks href="#projects">Projects</SectionLinks>
             </li>
             <li>
-                <StyledLink href="#contact">Contact</StyledLink>
+                <SectionLinks href="#contact">Contact</SectionLinks>
             </li>
             <li>
-                <PrimaryButtonLookingLink
+                <ResumeButton
                     href="https://www.icloud.com/iclouddrive/0f3_G_MH9V2zy_C1kSTADtadQ#shankrith%5Fresume">
                     Resume
-                </PrimaryButtonLookingLink>
+                </ResumeButton>
             </li>
         </Container>
     </Navigation >)
