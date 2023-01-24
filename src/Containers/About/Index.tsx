@@ -21,6 +21,7 @@ const Heading2 = styled.h2`
         display: block;
         position: relative;
         top: -15px;
+        left: -15px;
         width: 300px;
         height: 2px;
         margin: 0px 170px;
@@ -74,7 +75,7 @@ const StyledListElement = styled.li`
     }
 `
 
-const TechStackList = ["Typescript", "React", "Golang", "Python", "AWS"]
+const TechStackList = ["Typescript", "React", "Golang", "AWS", "Postgres", "GraphQL"]
 export function AboutSection() {
     return (<SectionContainer id="about" >
         <Heading2>About Me</Heading2>

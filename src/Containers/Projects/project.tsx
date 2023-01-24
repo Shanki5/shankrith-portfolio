@@ -17,15 +17,11 @@ const ParentContainer = styled.li`
 
 `;
 const ImageContainer = styled.div<IStyleProps>`
-
-
     max-width: 500px;          
     overflow: hidden;
     border-radius: 5px;
     ${props => props.orientation === true ?
-        `grid-area: 1 / 6 / -1 / -1;` : `grid-area: 1 / 1 / -1 / 7;
-`}
-
+        `grid-area: 1 / 6 / -1 / -1;` : `grid-area: 1 / 1 / -1 / 7;`}
 `;
 
 interface IStyleProps {
@@ -33,24 +29,17 @@ interface IStyleProps {
 }
 
 const ContentContainer = styled.div<IStyleProps>`
-    /* grid-area: 1 / 1 / -1 / 7; */
-    grid-area: 1 / 6 / -1 / -1;  
-
-    /* text-align: left;  */
-    text-align: right;
     z-index: 10;
     display:flex;
     flex-direction: column;
     gap: 1rem;
-    align-items: end;
-    /* align-items: start; */
     ${props => props.orientation === true ?
         `align-items:start;
         text-align: left;
-        grid-area: 1 / 1 / -1 / 7;
+        grid-area: 1 / 1 / -1 / 6;
     ` :
         `align-items:end;
-        grid-area: 1 / 6 / -1 / -1;
+        grid-area: 1 / 7 / -1 / -1;
         text-align: right;
         `
     }
@@ -67,10 +56,46 @@ const TechStackContainer = styled.ul`
 const FrostedGlassBlock = styled.div`
     padding:1rem;
     margin: 0rem 0rem 0rem;
-    background-color: #112240;
+    background-color: #455d623b;
+    /* background:inherit; */
+    /* background-color: transparent; */
     border-radius: 5px;
     overflow: hidden;
     position:relative;
+
+    &:before{
+        position:absolute;
+        content: '';
+        background: inherit;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        box-shadow: inset 0 0 0 3000px rgba(22, 106, 132, 0.19);
+        filter: blur(100px);
+
+
+    }
+
+
+    /* padding:2rem;
+    background: inherit;
+    border-radius: 15px;
+    border: 1px solid rgba(5, 39, 56, 0.568);
+    overflow: hidden;
+    position:relative;
+    &:before {
+        position:absolute;
+        content: '';
+        background: inherit;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        box-shadow: inset 0 0 0 3000px rgba(211, 211, 211, 0.192);
+        filter: blur(50px);
+        border-radius: 15px;
+        } */
 `;
 
 const ProjectHeading = styled.h3`
