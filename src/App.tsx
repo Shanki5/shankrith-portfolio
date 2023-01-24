@@ -33,6 +33,11 @@ const BodyContainer = styled.main`
   gap: 5rem;
   align-items: center;
   max-width: 1600px;
+  ${props => {
+    return (`
+      color: ${props.theme.palette.common.main};
+    `)
+  }}
 `
 
 function App() {
@@ -46,10 +51,9 @@ function App() {
           <AboutSection />
           <WorkSection />
           <ProjectsSection />
+          <ContactSection />
         </BodyContainer>
         <ContactLinks />
-        <ContactSection />
-
         <Footer />
       </AppContainer>
     </ThemeProvider>

@@ -3,8 +3,8 @@ export const defaultTheme: DefaultTheme = {
     borderRadius: '4px',
     palette: {
         common: {
-            main: '#726a95',
-            light: '#ffffff',
+            main: '#b9b9b9;',
+            light: '#9fb6ce',
             dark: '#000000'
         },
         primary: {

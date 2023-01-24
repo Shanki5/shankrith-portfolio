@@ -12,23 +12,6 @@ const Container = styled.div`
 const SectionContainer = styled.section`
     margin: 0px auto;
     max-width: 1000px;
-    color: white;
-`;
-const Heading2 = styled.h2`
-    font-size: 2rem;
-    position: relative;
-    &::after{
-        content: "";
-        display: block;
-        position: relative;
-        top: -15px;
-        left: -15px;
-        width: 300px;
-        height: 2px;
-        margin: 0px 170px;
-        background-color: white;
-    }
-    
 `;
 
 const Image = styled.div`

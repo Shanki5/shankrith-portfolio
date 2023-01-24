@@ -1,7 +1,16 @@
 import styled from "styled-components"
 
 export const SectionHeading = styled.h2`
-    font-size: 2rem;
+    ${props => {
+        return (`
+        font-size: ${props.theme.font.heading.size}; 
+        color: ${props.theme.palette.common.light};
+        &::after{
+            background: ${props.theme.palette.common.light};
+        }
+        `)
+    }}
+    
     position: relative;
     &::after{
         content: "";
@@ -11,7 +20,6 @@ export const SectionHeading = styled.h2`
         width: 300px;
         top: -7px;
         left: 15px;
-        background: white;
     }
     
 `

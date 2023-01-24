@@ -5,7 +5,6 @@ import { SectionHeading } from "../../Components/Common";
 const SectionContainer = styled.section`
     margin: 0px auto;
     max-width: 700px;
-    color: white;
 
 `;
 

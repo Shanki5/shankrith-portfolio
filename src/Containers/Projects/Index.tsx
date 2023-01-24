@@ -14,7 +14,6 @@ const Container = styled.ul`
 const SectionContainer = styled.section`
     margin: 0px auto;
     max-width: 1000px;
-    color: white;
 `;
 
 export function ProjectsSection() {
