@@ -8,6 +8,8 @@ import { ContactLinks } from './Components/SideContainers';
 import { ContactSection } from './Containers/Contact/Index';
 import { Footer } from './Components/Footer';
 import { HeroView } from './Containers/Hero/Index';
+import { ThemeProvider } from 'styled-components';
+import { defaultTheme } from './theme';
 
 const AppContainer = styled.div`
   width: 100%;
@@ -29,19 +31,21 @@ const BodyContainer = styled.main`
 
 function App() {
   return (
-    <AppContainer>
-      <Navbar />
-      <BodyContainer >
-        <HeroView />
-        <AboutSection />
-        <WorkSection />
-        <ProjectsSection />
-      </BodyContainer>
-      <ContactLinks />
-      <ContactSection />
+    <ThemeProvider theme={defaultTheme}>
+      <AppContainer>
+        <Navbar />
+        <BodyContainer >
+          <HeroView />
+          <AboutSection />
+          <WorkSection />
+          <ProjectsSection />
+        </BodyContainer>
+        <ContactLinks />
+        <ContactSection />
 
-      <Footer />
-    </AppContainer>
+        <Footer />
+      </AppContainer>
+    </ThemeProvider>
   );
 }
 

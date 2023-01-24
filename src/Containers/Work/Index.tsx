@@ -10,7 +10,7 @@ const SectionContainer = styled.section`
 `;
 
 const Heading2 = styled.h2`
-    font-size: 32px;
+    font-size: 2rem;
     position: relative;
     &::after{
         content: "";

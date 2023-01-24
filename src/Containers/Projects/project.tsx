@@ -99,7 +99,7 @@ const FrostedGlassBlock = styled.div`
 `;
 
 const ProjectHeading = styled.h3`
-  font-size: 28px;  
+  font-size: 1.75rem;  
   font-weight: 600;
 `;
 

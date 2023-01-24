@@ -17,7 +17,7 @@ const Container = styled.div`
   `;
 
 const Heading2 = styled.h2`
-font-size: 32px;
+font-size: 2rem;
 position: relative;
 `;
 

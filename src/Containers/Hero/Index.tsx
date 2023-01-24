@@ -9,8 +9,12 @@ const HeroSectionContainer = styled.section`
     min-height: 70vh;
 `
 const Heading1 = styled.h1`
-    font-size: 16px;
-    color:  #64ffda;
+    ${props => {
+        return (`
+        color: ${props.theme.palette.primary.main};
+        `)
+    }}
+    font-size: 1rem;  
 `;
 const Heading2 = styled.h2`
     font-size: 80px;

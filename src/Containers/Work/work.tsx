@@ -22,7 +22,7 @@ const Container = styled.div`
 
 const Heading = styled.h3`
     margin: 0;
-    font-size: 22px;
+    font-size: 1.75rem;
     font-weight: 500;
 `
 const DateRange = styled.p`
@@ -35,11 +35,14 @@ const dateOptions: Intl.DateTimeFormatOptions = {
     month: 'short',
 }
 
+
 const StyledListElement = styled.li`
     &::before{
         content: "» ";
-        color: #64ffda;
         position: relative;
+        ${props => {
+        return (`color: ${props.theme.palette.primary.main};`)
+    }}
     }
 `
 const GridList = styled.ul`
@@ -47,9 +50,9 @@ const GridList = styled.ul`
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: 300;
-    color: rgb(136, 146, 176);
+    /* color: rgb(136, 146, 176); */
 
 `
 
