@@ -4,7 +4,7 @@ import { PrimaryButtonLookingLink } from "../../Components/Common";
 const HeroSectionContainer = styled.section`
     margin: 0px auto;
     max-width: 1000px;
-    min-height: 70vh;
+    min-height: 80vh;
 `
 const Heading1 = styled.h1`
     ${props => {
