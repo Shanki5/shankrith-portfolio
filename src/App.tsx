@@ -54,7 +54,7 @@ function App() {
           <ProjectsSection />
           <ContactSection />
         </BodyContainer>
-        <ContactLinks />
+        {/* <ContactLinks /> */}
         <Footer />
       </AppContainer>
     </ThemeProvider>

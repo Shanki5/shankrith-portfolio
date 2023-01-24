@@ -9,6 +9,7 @@ const Container = styled.ul`
     gap: 5rem;
     align-items:center;
     flex-direction:column;
+    padding:0;
 
 `
 const SectionContainer = styled.section`

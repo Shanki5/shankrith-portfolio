@@ -17,13 +17,21 @@ const ParentContainer = styled.li`
   grid-template-columns: repeat(12, 1fr);
   align-items: center;
 
+
 `;
 const ImageContainer = styled.div<IStyleProps>`
     max-width: 500px;          
     overflow: hidden;
     border-radius: 5px;
+    @media (min-width: 768px){
     ${props => props.orientation === true ?
         `grid-area: 1 / 6 / -1 / -1;` : `grid-area: 1 / 1 / -1 / 7;`}
+    }
+
+    @media (max-width: 768px) {opacity:0.50;}
+
+    grid-area: 1 / 1 / 1 / -1;
+
 `;
 
 interface IStyleProps {
@@ -35,6 +43,7 @@ const ContentContainer = styled.div<IStyleProps>`
     display:flex;
     flex-direction: column;
     gap: 1rem;
+    @media (min-width: 768px){
     ${props => props.orientation === true ?
         `align-items:start;
         text-align: left;
@@ -45,6 +54,10 @@ const ContentContainer = styled.div<IStyleProps>`
         text-align: right;
         `
     }
+    padding: 0;}
+    text-align:left;
+    padding: 0 1rem;
+    grid-area: 1 / 1 / 2 / 12;
 `;
 const TechStackContainer = styled.ul`
     list-style-type:none;
@@ -53,9 +66,12 @@ const TechStackContainer = styled.ul`
     font-weight:300;
     color: #64ffda;
     padding: 0;
+
 `;
 
 const FrostedGlassBlock = styled.div`
+background-color: transparent;
+@media (min-width: 768px){
     padding:1rem;
     margin: 0rem 0rem 0rem;
     background-color: #455d623b;
@@ -75,8 +91,34 @@ const FrostedGlassBlock = styled.div`
         filter: blur(100px);
 
 
-    }
+    }}
 `;
+
+const StyledLinkImage = styled.a`
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display:inline-block;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        inset: 0px;
+        z-index: 3;
+        background-color: #2a2a3e;
+        mix-blend-mode: screen;
+    }
+`
+
+const ImageWrapper = styled.div`
+    z-index: 1;
+    @media (max-width: 768px){filter: blur(1px);}
+    height: 100%;
+    width: auto;
+    max-width: 700px;
+`
 
 export function Project(props: IProjectProps) {
     return (
@@ -98,7 +140,12 @@ export function Project(props: IProjectProps) {
                 </div>
             </ContentContainer>
             <ImageContainer {...props}>
-                <a href={props.githubUrl ? props.githubUrl.toString() : ""}><img src={props.imageUrl.toString()} width="500" alt="" /></a>
+                <StyledLinkImage href={props.githubUrl ? props.githubUrl.toString() : ""}>
+                    <ImageWrapper>
+                        <img src={props.imageUrl.toString()} width="700" height="500" alt="" />
+                    </ImageWrapper>
+                </StyledLinkImage>
+
 
             </ImageContainer>
         </ParentContainer >

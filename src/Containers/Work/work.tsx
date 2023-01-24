@@ -47,6 +47,7 @@ const GridList = styled.ul`
     gap: 1rem;
     font-size: 1rem;
     font-weight: 300;
+    padding: 0;
 
 `
 

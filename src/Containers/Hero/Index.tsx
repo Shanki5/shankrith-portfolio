@@ -4,7 +4,7 @@ import { PrimaryButtonLookingLink } from "../../Components/Common";
 const HeroSectionContainer = styled.section`
     margin: 0px auto;
     width: 100%;
-    min-height: 80vh;
+    min-height: 90vh;
 `
 const Heading1 = styled.h1`
     ${props => {
@@ -20,7 +20,8 @@ const Heading2 = styled.h2`
         color: ${props.theme.palette.common.light};
         `)
     }}
-    font-size: 80px;
+    font-size: 40px;
+    @media (min-width: 768px){font-size: 80px;}
     margin: 0;
 `;
 
@@ -30,7 +31,8 @@ const Heading3 = styled.h3`
         color: ${props.theme.palette.common.dark};
         `)
     }}
-    font-size: 40px;
+    @media (min-width: 768px){font-size: 40px;}
+    font-size: 30px;
     margin: 0 0 2rem;  
     font-weight: 600;
 `;
