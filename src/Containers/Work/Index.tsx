@@ -2,9 +2,12 @@ import { Work } from "./work";
 import { workExperienceData } from "./Data";
 import styled from "styled-components";
 import { SectionHeading } from "../../Components/Common";
+
+
 const SectionContainer = styled.section`
     margin: 0px auto;
     max-width: 700px;
+    width: 100%;
 
 `;
 

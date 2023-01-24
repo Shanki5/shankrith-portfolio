@@ -18,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
 `
 
 const AppContainer = styled.div`
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   gap: 5rem;
@@ -32,6 +32,7 @@ const BodyContainer = styled.main`
   flex-direction: column;
   gap: 5rem;
   align-items: center;
+  width: 80vw;
   max-width: 1600px;
   ${props => {
     return (`
@@ -45,7 +46,7 @@ function App() {
     <ThemeProvider theme={defaultTheme}>
       <GlobalStyle />
       <AppContainer>
-        <Navbar />
+        {/* <Navbar /> */}
         <BodyContainer >
           <HeroView />
           <AboutSection />

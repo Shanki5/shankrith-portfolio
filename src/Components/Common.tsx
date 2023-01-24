@@ -10,8 +10,9 @@ export const SectionHeading = styled.h2`
         }
         `)
     }}
-    
     position: relative;
+
+    @media (min-width: 768px){
     &::after{
         content: "";
         display:inline-block;
@@ -20,7 +21,7 @@ export const SectionHeading = styled.h2`
         width: 300px;
         top: -7px;
         left: 15px;
-    }
+    }}
 `
 
 export const SubHeading = styled.h3`

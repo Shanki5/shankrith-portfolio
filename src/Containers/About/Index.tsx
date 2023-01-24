@@ -4,27 +4,36 @@ import headshot from '../../images/headshot.jpg'
 import { SectionHeading } from "../../Components/Common";
 
 const Container = styled.div`
+    width: 100%;
     display: grid;
     gap: 5rem;
     grid-template-columns: 3fr 2fr;
+    @media (max-width: 768px)
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
 `
 
 const SectionContainer = styled.section`
-    margin: 0px auto;
     max-width: 1000px;
+    width: 100%;
+
 `;
 
 const Image = styled.div`
     border-radius: 25px;
     overflow: hidden;
-    max-width: 300px;
-    max-height: 300px;
+    max-width: 250px;
+    max-height: 250px;
     z-index:10;
     
 `;
 
 const FrostedGlassBlock = styled.div`
-    padding:2rem;
+    padding:1rem;
     background: inherit;
     border-radius: 15px;
     border: 1px solid rgba(5, 39, 56, 0.568);
@@ -49,6 +58,7 @@ const GridList = styled.ul`
     gap: 1rem;
     grid-template-columns: 1fr 1fr;
     list-style-type:none;
+    padding-left: 1rem;
 `
 
 const StyledListElement = styled.li`
@@ -83,7 +93,7 @@ export function AboutSection() {
                 </div>
                 <Image>
                     <picture>
-                        <img src={headshot} alt="" width="300" height="300" />
+                        <img src={headshot} alt="" width="250" height="250" />
                     </picture>
                 </Image>
             </Container>

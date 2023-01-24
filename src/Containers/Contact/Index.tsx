@@ -4,16 +4,17 @@ import { PrimaryButtonLookingLink } from "../../Components/Common";
 import { SectionHeading } from "../../Components/Common";
 
 const SectionContainer = styled.section`
-    margin: 0px auto;
     max-width: 1000px;
     text-align:center;
+    width: 100%;
 `
 const Container = styled.div`
     display: flex;
     gap: 2rem;
     align-items:center;
     flex-direction:column;
-    padding 0rem 15rem;
+    /* padding 0rem 15rem; */
+    width: 100%;
   `;
 
 const Heading2 = styled(SectionHeading)`
