@@ -52,7 +52,11 @@ const GridList = styled.ul`
 `
 
 const StyledListElement = styled.li`
-    color: #64ffda;
+    ${props => {
+        return (`
+        color: ${props.theme.palette.primary.main};  
+        `)
+    }}
     &::before{
         content: "» ";
         position: relative;
