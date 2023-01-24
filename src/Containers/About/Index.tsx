@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import headshot from '../../images/headshot.jpg'
+import { SectionHeading } from "../../Components/Common";
 
 const Container = styled.div`
     display: grid;
@@ -78,7 +79,7 @@ const StyledListElement = styled.li`
 const TechStackList = ["Typescript", "React", "Golang", "AWS", "Postgres", "GraphQL"]
 export function AboutSection() {
     return (<SectionContainer id="about" >
-        <Heading2>About Me</Heading2>
+        <SectionHeading>About Me</SectionHeading>
         <FrostedGlassBlock>
             <Container>
                 <div>

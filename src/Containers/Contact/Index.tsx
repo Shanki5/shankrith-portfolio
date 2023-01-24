@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { PrimaryButtonLookingLink } from "../../Components/Common";
+import { SectionHeading } from "../../Components/Common";
 
 const SectionContainer = styled.section`
     margin: 0px auto;
@@ -16,9 +17,10 @@ const Container = styled.div`
     padding 0rem 15rem;
   `;
 
-const Heading2 = styled.h2`
-font-size: 2rem;
-position: relative;
+const Heading2 = styled(SectionHeading)`
+&::after{
+    display:none;
+}
 `;
 
 export function ContactSection() {

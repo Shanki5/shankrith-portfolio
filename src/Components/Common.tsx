@@ -1,4 +1,20 @@
 import styled from "styled-components"
+
+export const SectionHeading = styled.h2`
+    font-size: 2rem;
+    position: relative;
+    &::after{
+        content: "";
+        display:inline-block;
+        position:relative;
+        height: 2px;
+        width: 300px;
+        top: -7px;
+        left: 15px;
+        background: white;
+    }
+    
+`
 export const StyledLink = styled.a`
     text-decoration: none;
     color: #64ffda;
