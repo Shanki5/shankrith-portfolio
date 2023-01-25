@@ -23,7 +23,8 @@ const AppContainer = styled.div`
 `;
 
 const BodyContainer = styled.main`
-  padding: 0px 150px;
+  @media (min-width: 768px){padding: 0px 10rem;}
+  padding: 0px 3rem;
   display: flex;
   flex-direction: column;
   gap: 5rem;
