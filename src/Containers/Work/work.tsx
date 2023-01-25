@@ -57,7 +57,8 @@ export function Work(props: IWorkProps) {
             <span>{props.role}</span>
             <span>
                 &nbsp;@&nbsp;
-                <StyledLink href={props.company.url} >{props.company.name}</StyledLink>
+                <StyledLink href={props.company.url}
+                    target="_blank">{props.company.name}</StyledLink>
             </span>
         </SubHeading>
         <DateRange>{props.startDate.toLocaleString("en-IN", dateOptions)}&nbsp;-&nbsp;

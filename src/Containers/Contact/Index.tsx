@@ -13,7 +13,6 @@ const Container = styled.div`
     gap: 2rem;
     align-items:center;
     flex-direction:column;
-    /* padding 0rem 15rem; */
     width: 100%;
   `;
 
