@@ -3,13 +3,17 @@ import styled from "styled-components"
 import { Navbar } from "../Containers/Navbar/Index"
 
 const HeaderContainer = styled.header`
-    padding: 0.5rem 2rem 0;
+    padding: 0.5rem 1rem 0;
+
+    @media (min-width: 768px){
+        padding: 0.5rem 2rem 0;
+    }
     position: sticky;
     display: flex;
     width: 100%;
     background: #070e1c;
     z-index: 15;
-    box-shadow: 0 5px 30px -10px #134444;
+    box-shadow: 0px 10px 36px -10px #1d3940;
 
     transition-property: all; 
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -45,7 +49,7 @@ export function HeaderView() {
     }, [scrollDirection])
 
     return (
-        <HeaderContainer style={{ top: scrollDirection === ScrollDirection.Up ? '0' : '-60px' }}>
+        <HeaderContainer style={{ top: scrollDirection === ScrollDirection.Up ? '0' : '-80px' }}>
             <Navbar />
         </HeaderContainer>
     )

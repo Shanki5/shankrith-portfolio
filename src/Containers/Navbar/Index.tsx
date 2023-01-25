@@ -6,7 +6,8 @@ import { PrimaryButtonLookingLink } from "../../Components/Common";
 
 const Container = styled.ul`
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
+    @media (min-width: 768px){gap: 2rem;}
     align-items:center;
     list-style-type:none;
     justify-content: flex-end;
