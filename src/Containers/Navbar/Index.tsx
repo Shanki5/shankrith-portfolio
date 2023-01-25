@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { StyledLink } from "../../Components/Common";
 import { PrimaryButtonLookingLink } from "../../Components/Common";
 
 
@@ -54,7 +53,8 @@ export function Navbar() {
             </li>
             <li>
                 <ResumeButton
-                    href="https://www.icloud.com/iclouddrive/0f3_G_MH9V2zy_C1kSTADtadQ#shankrith%5Fresume">
+                    href="/Documents/shankrith_resume.pdf"
+                    target="_blank">
                     Resume
                 </ResumeButton>
             </li>
