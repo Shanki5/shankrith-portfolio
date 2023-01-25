@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
-import { debounce } from '../utilities/helpers';
 import styled from "styled-components"
-
 import { Navbar } from "../Containers/Navbar/Index"
 
 const HeaderContainer = styled.header`
