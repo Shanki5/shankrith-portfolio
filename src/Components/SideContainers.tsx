@@ -5,27 +5,40 @@ import { BsGithub } from "react-icons/bs"
 import { GrLinkedin } from "react-icons/gr";
 
 const SideContainer = styled.div`
-    width: 40px;
+
+@media (min-width: 768px)
+    { width: 40px;
     position: fixed;
     bottom: 0px;
     left: 20px;
     right: auto;
     z-index: 10;
+    }
+    /* width: 0px; */
+
 `;
 
 const ContactLinksContainer = styled.ul`
+
+    flex-direction:row;
+    @media (min-width: 768px){
+        flex-direction: column;
+        &::after{
+            content: "";
+            width: 1px;
+            height: 180px;
+            margin: 0px auto;
+            background-color: white;
+        }
+    }
     display:flex;
     gap:1rem;
     align-items:center;
     list-style-type:none;
-    flex-direction:column;
-    &::after{
-    content: "";
-    width: 1px;
-    height: 180px;
-    margin: 0px auto;
-    background-color: white;
-    }
+    padding: 0 0 2rem;
+    margin: 0;
+    justify-content: center;
+
 `;
 
 const StyledLink = styled.a`
